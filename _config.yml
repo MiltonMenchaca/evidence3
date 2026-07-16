@@ -1,0 +1,35 @@
+title: "Ética en código"
+author: "Milton Emilio Menchaca Manero"
+description: "Blog académico de Ética profesional y ciudadanía — Universidad Tecmilenio"
+baseurl: ""
+url: "https://miltonmenchaca.github.io"
+repository: "MiltonMenchaca/evidence3"
+
+# Tema
+theme: minima
+
+# Markdown
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Excluir del build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - Evidencia3_Parte1_Borrador_Menchaca_2901032.docx
+  - Evidencia3_Parte2_Blog_Menchaca_2901032.docx
+
+# Páginas del menú superior (Minima header_pages)
+header_pages:
+  - actividades.html
+  - conclusion-reflexion.html
+  - referencias.html

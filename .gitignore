@@ -1,0 +1,28 @@
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby / Bundler
+.bundle/
+vendor/
+Gemfile.lock
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs
+*.log
+
+# Documentos originales (no son parte del sitio)
+Evidencia3_Parte1_Borrador_Menchaca_2901032.docx
+Evidencia3_Parte2_Blog_Menchaca_2901032.docx
