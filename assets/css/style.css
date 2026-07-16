@@ -1,543 +1,654 @@
 /* ============================================================
-   Ética en código — Tema académico clásico
-   Override del tema Minima para Jekyll
-   Paleta: verde académico profundo + sepia + crema
-   Tipografía: Merriweather (títulos) + Source Sans Pro (cuerpo)
+   Ética en código — Tema académico clásico v2
+   CSS con alta especificidad para sobrescribir Minima
    ============================================================ */
 
-/* ---------- Tipografías ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
-
-/* ---------- Variables de color ---------- */
-:root {
-  --color-bg:        #fdfcf8;  /* crema papel */
-  --color-bg-alt:    #f5f1e8;  /* crema más oscuro para secciones alternas */
-  --color-text:      #2c2c2c;  /* gris casi negro */
-  --color-muted:     #6b6b6b;  /* gris medio */
-  --color-accent:    #1e4d3b;  /* verde académico profundo */
-  --color-accent-2:  #8b6f47;  /* sepia/dorado apagado */
-  --color-border:    #d4c9b1;  /* línea cálida */
-  --color-card:      #ffffff;
-  --shadow-soft:     0 2px 8px rgba(30, 77, 59, 0.08);
-  --serif:           'Merriweather', Georgia, 'Times New Roman', serif;
-  --sans:            'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --max-width:       720px;
-}
-
-/* ---------- Reset suave y base ---------- */
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+/* ============================================================
+   VARIABLES (declaradas en :root, html y body para máxima cobertura)
+   ============================================================ */
+:root,
+html,
 body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  font-family: var(--sans);
-  font-size: 17px;
-  line-height: 1.7;
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --ec-bg:         #fdfcf8 !important;
+  --ec-bg-alt:     #f5f1e8 !important;
+  --ec-text:       #2c2c2c !important;
+  --ec-muted:      #6b6b6b !important;
+  --ec-accent:     #1e4d3b !important;
+  --ec-accent-2:   #8b6f47 !important;
+  --ec-border:     #d4c9b1 !important;
+  --ec-card:       #ffffff !important;
+  --ec-shadow:     0 2px 8px rgba(30, 77, 59, 0.08) !important;
+  --ec-serif:      'Merriweather', Georgia, 'Times New Roman', serif !important;
+  --ec-sans:       'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
 }
 
-/* ---------- Tipografía general ---------- */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--serif);
-  color: var(--color-accent);
-  font-weight: 700;
-  line-height: 1.3;
-  margin-top: 1.8em;
-  margin-bottom: 0.6em;
-  letter-spacing: -0.01em;
+/* ============================================================
+   RESET Y BASE
+   ============================================================ */
+html body {
+  background-color: var(--ec-bg) !important;
+  color: var(--ec-text) !important;
+  font-family: var(--ec-sans) !important;
+  font-size: 17px !important;
+  line-height: 1.7 !important;
 }
 
-h1 { font-size: 2.3rem; }
-h2 { font-size: 1.7rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.3em; }
-h3 { font-size: 1.3rem; }
-h4 { font-size: 1.1rem; }
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5,
+html body h6 {
+  font-family: var(--ec-serif) !important;
+  color: var(--ec-accent) !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  letter-spacing: -0.01em !important;
+}
 
-p {
-  margin: 0 0 1em 0;
+html body h1 { font-size: 2.3rem !important; }
+html body h2 { font-size: 1.7rem !important; border-bottom: 1px solid var(--ec-border) !important; padding-bottom: 0.4em !important; margin-top: 1.8em !important; margin-bottom: 0.8em !important; }
+html body h3 { font-size: 1.3rem !important; }
+html body h4 { font-size: 1.1rem !important; }
+html body .post-content h2 { font-size: 1.7rem !important; }
+html body .post-content h3 { font-size: 1.3rem !important; }
+html body .post-content h4 { font-size: 1.1rem !important; }
+
+html body p {
+  margin: 0 0 1em 0 !important;
   text-align: justify;
   hyphens: auto;
 }
 
-a {
-  color: var(--color-accent);
-  text-decoration: none;
-  border-bottom: 1px solid var(--color-border);
-  transition: color 0.2s, border-color 0.2s;
+html body a {
+  color: var(--ec-accent) !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid var(--ec-border) !important;
+  transition: color 0.2s, border-color 0.2s !important;
 }
 
-a:hover {
-  color: var(--color-accent-2);
-  border-bottom-color: var(--color-accent-2);
+html body a:hover {
+  color: var(--ec-accent-2) !important;
+  border-bottom-color: var(--ec-accent-2) !important;
+  text-decoration: none !important;
 }
 
-blockquote {
-  border-left: 4px solid var(--color-accent-2);
-  background-color: var(--color-bg-alt);
-  margin: 1.5em 0;
-  padding: 1em 1.5em;
-  font-style: italic;
-  color: var(--color-text);
-  border-radius: 0 4px 4px 0;
+html body blockquote {
+  border-left: 4px solid var(--ec-accent-2) !important;
+  background-color: var(--ec-bg-alt) !important;
+  margin: 1.5em 0 !important;
+  padding: 1em 1.5em !important;
+  font-style: italic !important;
+  color: var(--ec-text) !important;
+  border-radius: 0 4px 4px 0 !important;
 }
 
-blockquote p:last-child { margin-bottom: 0; }
+html body blockquote p:last-child { margin-bottom: 0 !important; }
 
-code, pre {
-  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-  font-size: 0.9em;
+html body code {
+  background-color: var(--ec-bg-alt) !important;
+  color: var(--ec-text) !important;
+  padding: 0.15em 0.4em !important;
+  border-radius: 3px !important;
+  border: 1px solid var(--ec-border) !important;
+  font-size: 0.9em !important;
 }
 
-code {
-  background-color: var(--color-bg-alt);
-  padding: 0.15em 0.4em;
-  border-radius: 3px;
-  border: 1px solid var(--color-border);
+html body hr {
+  border: 0 !important;
+  border-top: 1px solid var(--ec-border) !important;
+  margin: 2.5em 0 !important;
 }
 
-hr {
-  border: 0;
-  border-top: 1px solid var(--color-border);
-  margin: 2.5em 0;
+/* ============================================================
+   CABECERA Y FOOTER DEL SITIO
+   ============================================================ */
+html body .site-header {
+  border-top: 4px solid var(--ec-accent) !important;
+  border-bottom: 1px solid var(--ec-border) !important;
+  background-color: var(--ec-bg) !important;
 }
 
-/* ---------- Cabecera del sitio (override Minima) ---------- */
-.site-header {
-  border-top: 4px solid var(--color-accent);
-  border-bottom: 1px solid var(--color-border);
-  background-color: var(--color-bg);
+html body .site-title,
+html body .site-title:visited,
+html body .site-title:hover {
+  font-family: var(--ec-serif) !important;
+  font-weight: 700 !important;
+  font-size: 1.4rem !important;
+  color: var(--ec-accent) !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1.5 !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
 }
 
-.site-title {
-  font-family: var(--serif);
-  font-weight: 700;
-  color: var(--color-accent) !important;
-  letter-spacing: 0.01em;
+html body .site-nav .page-link {
+  color: var(--ec-text) !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  border-bottom: none !important;
+  text-decoration: none !important;
 }
 
-.site-title:hover {
-  color: var(--color-accent-2) !important;
-  text-decoration: none;
+html body .site-nav .page-link:hover {
+  color: var(--ec-accent) !important;
+  text-decoration: underline !important;
+  text-decoration-color: var(--ec-accent-2) !important;
 }
 
-.site-nav .page-link {
-  color: var(--color-text);
-  font-weight: 600;
-  font-size: 0.95rem;
-  border-bottom: none;
+html body .site-footer {
+  border-top: 1px solid var(--ec-border) !important;
+  background-color: var(--ec-bg-alt) !important;
+  padding: 1.8rem 0 !important;
+  font-size: 0.9rem !important;
+  color: var(--ec-muted) !important;
 }
 
-.site-nav .page-link:hover {
-  color: var(--color-accent);
-  text-decoration: underline;
-  text-decoration-color: var(--color-accent-2);
+html body .site-footer .wrapper {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 0.5em !important;
 }
 
-/* ---------- Contenedor principal ---------- */
-.page-content {
-  padding: 2.5rem 0;
-  min-height: calc(100vh - 200px);
+html body .site-footer a {
+  color: var(--ec-accent) !important;
+  border-bottom: none !important;
+  text-decoration: none !important;
 }
 
-.wrapper {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 1.25rem;
+html body .site-footer a:hover {
+  text-decoration: underline !important;
 }
 
-/* ---------- Posts / entradas ---------- */
-.post-header {
-  margin-bottom: 2em;
-  padding-bottom: 1em;
-  border-bottom: 1px solid var(--color-border);
+/* ============================================================
+   CONTENEDOR PRINCIPAL
+   ============================================================ */
+html body .page-content {
+  padding: 2.5rem 0 !important;
+  flex: 1 0 auto !important;
 }
 
-.post-title {
-  font-size: 2.2rem;
-  margin: 0 0 0.3em 0;
-  color: var(--color-accent);
-  line-height: 1.2;
+html body .wrapper {
+  max-width: 760px !important;
+  margin: 0 auto !important;
+  padding: 0 1.25rem !important;
 }
 
-.post-subtitle {
-  font-family: var(--sans);
-  font-weight: 400;
-  font-style: italic;
-  color: var(--color-accent-2);
-  font-size: 1.1rem;
-  margin: 0 0 0.8em 0;
+/* ============================================================
+   POSTS / ENTRADAS
+   ============================================================ */
+html body .post-header {
+  margin-bottom: 2em !important;
+  padding-bottom: 1em !important;
+  border-bottom: 1px solid var(--ec-border) !important;
 }
 
-.post-meta {
-  font-size: 0.9rem;
-  color: var(--color-muted);
-  font-family: var(--sans);
-  font-weight: 400;
+html body .post-title {
+  font-size: 2.4rem !important;
+  margin: 0 0 0.3em 0 !important;
+  color: var(--ec-accent) !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em !important;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
 }
 
-.post-content > *:first-child { margin-top: 0; }
-
-.post-content img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-  box-shadow: var(--shadow-soft);
+html body .post-subtitle {
+  font-family: var(--ec-sans) !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+  color: var(--ec-accent-2) !important;
+  font-size: 1.1rem !important;
+  margin: 0 0 0.8em 0 !important;
 }
 
-/* ---------- Lista de posts (home) ---------- */
-.post-list {
-  list-style: none;
-  padding: 0;
-  margin: 1.5em 0;
+html body .post-meta {
+  font-size: 0.9rem !important;
+  color: var(--ec-muted) !important;
+  font-family: var(--ec-sans) !important;
+  font-weight: 400 !important;
 }
 
-.post-list > li {
-  margin-bottom: 2em;
-  padding-bottom: 1.5em;
-  border-bottom: 1px solid var(--color-border);
+html body .post-content > *:first-child { margin-top: 0 !important; }
+
+html body .post-content img {
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 4px !important;
+  box-shadow: var(--ec-shadow) !important;
 }
 
-.post-list > li:last-child {
-  border-bottom: none;
+/* ============================================================
+   LISTA DE POSTS (home)
+   ============================================================ */
+html body .post-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 1.5em 0 !important;
 }
 
-.post-list .post-link {
-  font-family: var(--serif);
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--color-accent);
-  border-bottom: none;
+html body .post-list > li {
+  margin-bottom: 2em !important;
+  padding-bottom: 1.5em !important;
+  border-bottom: 1px solid var(--ec-border) !important;
 }
 
-.post-list .post-link:hover {
-  color: var(--color-accent-2);
+html body .post-list > li:last-child {
+  border-bottom: none !important;
 }
 
-.post-list .post-excerpt {
-  margin-top: 0.5em;
-  color: var(--color-muted);
-  font-size: 0.95rem;
-  line-height: 1.6;
+html body .post-list .post-link {
+  font-family: var(--ec-serif) !important;
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+  color: var(--ec-accent) !important;
+  border-bottom: none !important;
+  text-decoration: none !important;
 }
 
-.post-list .post-meta {
-  margin-top: 0.4em;
-  display: block;
+html body .post-list .post-link:hover {
+  color: var(--ec-accent-2) !important;
 }
 
-/* ---------- Footer ---------- */
-.site-footer {
-  border-top: 1px solid var(--color-border);
-  background-color: var(--color-bg-alt);
-  padding: 1.5rem 0;
-  font-size: 0.9rem;
-  color: var(--color-muted);
+html body .post-list .post-excerpt {
+  margin-top: 0.5em !important;
+  color: var(--ec-muted) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
 }
 
-.site-footer .wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5em;
+html body .post-list .post-meta {
+  margin-top: 0.4em !important;
+  display: block !important;
 }
 
-.site-footer a {
-  color: var(--color-accent);
-  border-bottom: none;
+/* ============================================================
+   TARJETAS
+   ============================================================ */
+html body .card,
+html body .post-content .card {
+  display: block !important;
+  background-color: var(--ec-card) !important;
+  border: 1px solid var(--ec-border) !important;
+  border-radius: 6px !important;
+  padding: 1.5em 1.8em !important;
+  margin: 1.5em 0 !important;
+  box-shadow: var(--ec-shadow) !important;
+  transition: transform 0.2s, box-shadow 0.2s !important;
 }
 
-.site-footer a:hover {
-  text-decoration: underline;
+html body .card:hover,
+html body .post-content .card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(30, 77, 59, 0.12) !important;
 }
 
-/* ---------- Tarjetas (entrada destacada, índice) ---------- */
-.card {
-  background-color: var(--color-card);
-  border: 1px solid var(--color-border);
-  border-radius: 6px;
-  padding: 1.5em;
-  margin: 1.5em 0;
-  box-shadow: var(--shadow-soft);
-  transition: transform 0.2s, box-shadow 0.2s;
+html body .card .card-title,
+html body .post-content .card .card-title {
+  margin-top: 0 !important;
+  margin-bottom: 0.5em !important;
+  font-family: var(--ec-serif) !important;
+  font-size: 1.25rem !important;
+  color: var(--ec-accent) !important;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
 }
 
-.card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(30, 77, 59, 0.12);
+html body .card .card-link,
+html body .post-content .card .card-link {
+  display: inline-block !important;
+  margin-top: 0.7em !important;
+  padding: 0.4em 0.9em !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  color: var(--ec-accent) !important;
+  background-color: transparent !important;
+  border: 1px solid var(--ec-accent) !important;
+  border-radius: 4px !important;
+  text-decoration: none !important;
+  transition: background-color 0.2s, color 0.2s !important;
 }
 
-.card-title {
-  margin-top: 0;
-  font-size: 1.2rem;
+html body .card .card-link:hover,
+html body .post-content .card .card-link:hover {
+  background-color: var(--ec-accent) !important;
+  color: #ffffff !important;
 }
 
-.card-link {
-  display: inline-block;
-  margin-top: 0.5em;
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: var(--color-accent);
-  border-bottom: 1px solid var(--color-accent-2);
+/* ============================================================
+   BOTONES
+   ============================================================ */
+html body .btn,
+html body .post-content .btn,
+html body a.btn,
+html body button.btn {
+  display: inline-block !important;
+  padding: 0.65em 1.4em !important;
+  margin: 0.3em 0.2em !important;
+  background-color: var(--ec-accent) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--ec-accent) !important;
+  border-radius: 4px !important;
+  font-family: var(--ec-sans) !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  transition: background-color 0.2s, color 0.2s, transform 0.1s !important;
+  line-height: 1.4 !important;
 }
 
-/* ---------- Botones ---------- */
-.btn {
-  display: inline-block;
-  padding: 0.55em 1.2em;
-  background-color: var(--color-accent);
-  color: #fff !important;
-  border: none;
-  border-radius: 4px;
-  font-family: var(--sans);
-  font-weight: 600;
-  font-size: 0.95rem;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.2s, transform 0.1s;
+html body .btn:hover,
+html body .post-content .btn:hover,
+html body a.btn:hover,
+html body button.btn:hover {
+  background-color: var(--ec-accent-2) !important;
+  color: #ffffff !important;
+  border-color: var(--ec-accent-2) !important;
+  text-decoration: none !important;
+  transform: translateY(-1px) !important;
 }
 
-.btn:hover {
-  background-color: var(--color-accent-2);
-  color: #fff !important;
-  transform: translateY(-1px);
-  border-bottom: none;
+html body .btn-secondary,
+html body a.btn-secondary,
+html body button.btn-secondary {
+  background-color: transparent !important;
+  color: var(--ec-accent) !important;
+  border: 1px solid var(--ec-accent) !important;
 }
 
-.btn-secondary {
-  background-color: transparent;
-  color: var(--color-accent) !important;
-  border: 1px solid var(--color-accent);
+html body .btn-secondary:hover,
+html body a.btn-secondary:hover,
+html body button.btn-secondary:hover {
+  background-color: var(--ec-accent) !important;
+  color: #ffffff !important;
 }
 
-.btn-secondary:hover {
-  background-color: var(--color-accent);
-  color: #fff !important;
+/* ============================================================
+   BLOQUES DE RECURSOS
+   ============================================================ */
+html body .recursos,
+html body .post-content .recursos {
+  display: block !important;
+  background-color: var(--ec-bg-alt) !important;
+  border-left: 4px solid var(--ec-accent) !important;
+  border-radius: 0 4px 4px 0 !important;
+  padding: 1em 1.5em !important;
+  margin: 1.8em 0 !important;
 }
 
-/* ---------- Bloques de recursos ---------- */
-.recursos {
-  background-color: var(--color-bg-alt);
-  border-left: 4px solid var(--color-accent);
-  padding: 1em 1.5em;
-  margin: 1.5em 0;
-  border-radius: 0 4px 4px 0;
+html body .recursos strong,
+html body .post-content .recursos strong {
+  color: var(--ec-accent) !important;
+  font-family: var(--ec-serif) !important;
+  display: block !important;
+  margin-bottom: 0.6em !important;
+  font-size: 1.05rem !important;
 }
 
-.recursos strong {
-  color: var(--color-accent);
-  font-family: var(--serif);
-  display: block;
-  margin-bottom: 0.5em;
+html body .recursos ul,
+html body .post-content .recursos ul {
+  margin: 0 !important;
+  padding-left: 1.2em !important;
+  list-style: disc !important;
 }
 
-.recursos ul {
-  margin: 0;
-  padding-left: 1.2em;
+html body .recursos li,
+html body .post-content .recursos li {
+  margin-bottom: 0.4em !important;
+  list-style: disc !important;
 }
 
-.recursos li {
-  margin-bottom: 0.3em;
+/* ============================================================
+   WIDGETS INTERACTIVOS
+   ============================================================ */
+html body .widget,
+html body .post-content .widget {
+  display: block !important;
+  background-color: var(--ec-card) !important;
+  border: 1px solid var(--ec-border) !important;
+  border-radius: 6px !important;
+  padding: 1.5em 1.8em !important;
+  margin: 2em 0 !important;
+  box-shadow: var(--ec-shadow) !important;
 }
 
-/* ---------- Widgets interactivos (actividades) ---------- */
-.widget {
-  background-color: var(--color-card);
-  border: 1px solid var(--color-border);
-  border-radius: 6px;
-  padding: 1.5em 1.8em;
-  margin: 2em 0;
-  box-shadow: var(--shadow-soft);
+html body .widget h3,
+html body .post-content .widget h3 {
+  margin-top: 0 !important;
+  margin-bottom: 0.6em !important;
+  font-family: var(--ec-serif) !important;
+  font-size: 1.3rem !important;
+  color: var(--ec-accent) !important;
+  border-bottom: 1px solid var(--ec-border) !important;
+  padding-bottom: 0.4em !important;
 }
 
-.widget h3 {
-  margin-top: 0;
-  font-size: 1.3rem;
-  color: var(--color-accent);
-  border-bottom: 1px solid var(--color-border);
-  padding-bottom: 0.4em;
+html body .widget-intro {
+  color: var(--ec-muted) !important;
+  font-style: italic !important;
+  margin-bottom: 1.2em !important;
 }
 
-.widget-intro {
-  color: var(--color-muted);
-  font-style: italic;
-  margin-bottom: 1.2em;
+html body .widget-question,
+html body .post-content .widget-question {
+  display: block !important;
+  margin: 1.2em 0 !important;
+  padding: 1em 1.2em !important;
+  background-color: var(--ec-bg-alt) !important;
+  border-radius: 4px !important;
+  border: 1px solid rgba(212, 201, 177, 0.4) !important;
 }
 
-.widget-question {
-  margin: 1.2em 0;
-  padding: 1em;
-  background-color: var(--color-bg-alt);
-  border-radius: 4px;
+html body .widget-question p {
+  margin: 0 0 0.7em 0 !important;
+  font-weight: 600 !important;
+  font-family: var(--ec-sans) !important;
+  color: var(--ec-text) !important;
 }
 
-.widget-question p {
-  margin: 0 0 0.6em 0;
-  font-weight: 600;
-  font-family: var(--sans);
-  color: var(--color-text);
+html body .widget-question label,
+html body .post-content .widget-question label {
+  display: block !important;
+  margin: 0.3em 0 !important;
+  cursor: pointer !important;
+  padding: 0.3em 0.5em !important;
+  border-radius: 3px !important;
+  transition: background-color 0.15s !important;
+  font-weight: 400 !important;
 }
 
-.widget-question label {
-  display: block;
-  margin: 0.3em 0;
-  cursor: pointer;
-  padding: 0.3em 0.5em;
-  border-radius: 3px;
-  transition: background-color 0.15s;
+html body .widget-question label:hover {
+  background-color: rgba(139, 111, 71, 0.12) !important;
 }
 
-.widget-question label:hover {
-  background-color: rgba(139, 111, 71, 0.1);
+html body .widget-question input[type="radio"] {
+  margin-right: 0.5em !important;
+  accent-color: var(--ec-accent) !important;
 }
 
-.widget-question input[type="radio"] {
-  margin-right: 0.5em;
-  accent-color: var(--color-accent);
+html body .widget-question input[type="number"] {
+  width: 90px !important;
+  padding: 0.35em 0.6em !important;
+  border: 1px solid var(--ec-border) !important;
+  border-radius: 3px !important;
+  font-family: var(--ec-sans) !important;
+  margin-right: 0.5em !important;
+  background-color: #ffffff !important;
+  color: var(--ec-text) !important;
 }
 
-.widget-question input[type="number"] {
-  width: 80px;
-  padding: 0.3em 0.5em;
-  border: 1px solid var(--color-border);
-  border-radius: 3px;
-  font-family: var(--sans);
-  margin-right: 0.5em;
-  accent-color: var(--color-accent);
+html body .widget-question select {
+  width: 100% !important;
+  padding: 0.5em !important;
+  border: 1px solid var(--ec-border) !important;
+  border-radius: 3px !important;
+  font-family: var(--ec-sans) !important;
+  background-color: #ffffff !important;
+  color: var(--ec-text) !important;
 }
 
-.widget-result {
-  margin-top: 1em;
-  padding: 1em;
-  background-color: var(--color-bg-alt);
-  border-left: 4px solid var(--color-accent);
-  border-radius: 0 4px 4px 0;
-  font-weight: 600;
+html body .widget-result {
+  margin-top: 1em !important;
+  padding: 1em 1.2em !important;
+  background-color: var(--ec-bg-alt) !important;
+  border-left: 4px solid var(--ec-accent) !important;
+  border-radius: 0 4px 4px 0 !important;
+  font-weight: 600 !important;
   display: none;
+  color: var(--ec-text) !important;
 }
 
-.widget-result.show { display: block; }
+html body .widget-result.show { display: block !important; }
+html body .widget-result.correct { border-left-color: var(--ec-accent) !important; }
+html body .widget-result.wrong   { border-left-color: #b04a3a !important; }
 
-.widget-result.correct { border-left-color: var(--color-accent); }
-.widget-result.wrong   { border-left-color: #b04a3a; }
-
-.feedback-line {
-  display: block;
-  margin: 0.3em 0;
-  font-size: 0.92rem;
-  font-weight: 400;
-  color: var(--color-muted);
+html body .feedback-line {
+  display: block !important;
+  margin: 0.3em 0 !important;
+  font-size: 0.92rem !important;
+  font-weight: 400 !important;
+  color: var(--ec-muted) !important;
 }
 
-.feedback-line.correct { color: var(--color-accent); }
-.feedback-line.wrong   { color: #b04a3a; }
+html body .feedback-line.correct { color: var(--ec-accent) !important; }
+html body .feedback-line.wrong   { color: #b04a3a !important; }
 
-.widget-actions {
-  margin-top: 1.2em;
-  display: flex;
-  gap: 0.6em;
-  flex-wrap: wrap;
+html body .widget-actions {
+  margin-top: 1.4em !important;
+  display: flex !important;
+  gap: 0.6em !important;
+  flex-wrap: wrap !important;
 }
 
-.widget-scale {
-  display: flex;
-  gap: 0.5em;
-  flex-wrap: wrap;
-  margin: 0.5em 0 1em 0;
+html body .widget-scale {
+  display: flex !important;
+  gap: 0.5em !important;
+  flex-wrap: wrap !important;
+  margin: 0.5em 0 1em 0 !important;
 }
 
-.widget-scale label {
-  background-color: var(--color-card);
-  border: 1px solid var(--color-border);
-  padding: 0.4em 0.7em;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 0.9rem;
+html body .widget-scale label {
+  background-color: #ffffff !important;
+  border: 1px solid var(--ec-border) !important;
+  padding: 0.45em 0.85em !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  font-size: 0.9rem !important;
+  display: inline-block !important;
+  margin: 0 !important;
 }
 
-.widget-scale input[type="radio"]:checked + span {
-  font-weight: 700;
-  color: var(--color-accent);
+html body .widget-scale input[type="radio"]:checked + span {
+  font-weight: 700 !important;
+  color: var(--ec-accent) !important;
 }
 
-/* ---------- Cita destacada (estilo académico) ---------- */
-.epigraph {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 1.05rem;
-  text-align: center;
-  color: var(--color-accent-2);
-  margin: 2em 0;
-  padding: 1em;
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
+/* ============================================================
+   EPIGRAFE / CITA DESTACADA
+   ============================================================ */
+html body .epigraph,
+html body .post-content .epigraph {
+  display: block !important;
+  font-family: var(--ec-serif) !important;
+  font-style: italic !important;
+  font-size: 1.1rem !important;
+  text-align: center !important;
+  color: var(--ec-accent-2) !important;
+  margin: 2em 0 !important;
+  padding: 1.2em 1em !important;
+  border-top: 1px solid var(--ec-border) !important;
+  border-bottom: 1px solid var(--ec-border) !important;
+  background-color: transparent !important;
 }
 
-/* ---------- Tabla de contenidos (portada) ---------- */
-.toc {
-  background-color: var(--color-bg-alt);
-  border: 1px solid var(--color-border);
-  border-radius: 6px;
-  padding: 1.5em 2em;
-  margin: 2em 0;
+/* ============================================================
+   TABLA DE CONTENIDOS (portada)
+   ============================================================ */
+html body .toc {
+  display: block !important;
+  background-color: var(--ec-bg-alt) !important;
+  border: 1px solid var(--ec-border) !important;
+  border-radius: 6px !important;
+  padding: 1.5em 2em !important;
+  margin: 2em 0 !important;
+  box-shadow: var(--ec-shadow) !important;
 }
 
-.toc h2 {
-  margin-top: 0;
-  font-size: 1.3rem;
-  border-bottom: none;
-  padding-bottom: 0;
+html body .toc h2 {
+  margin-top: 0 !important;
+  margin-bottom: 0.6em !important;
+  font-size: 1.3rem !important;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
 }
 
-.toc ol {
-  padding-left: 1.5em;
-  margin: 0.5em 0 0 0;
+html body .toc ol {
+  padding-left: 1.5em !important;
+  margin: 0.5em 0 0 0 !important;
+  list-style: decimal !important;
 }
 
-.toc li {
-  margin-bottom: 0.5em;
+html body .toc li {
+  margin-bottom: 0.5em !important;
+  list-style: decimal !important;
 }
 
-.toc a {
-  font-weight: 500;
-  border-bottom: none;
+html body .toc a,
+html body .toc a:visited {
+  font-weight: 500 !important;
+  border-bottom: none !important;
+  text-decoration: none !important;
 }
 
-.toc a:hover {
-  color: var(--color-accent-2);
-  text-decoration: underline;
+html body .toc a:hover {
+  color: var(--ec-accent-2) !important;
+  text-decoration: underline !important;
 }
 
-/* ---------- Responsive ---------- */
+/* ============================================================
+   PÁRRAFOS CENTRADOS CON BOTONES
+   ============================================================ */
+html body p[style*="text-align: center"],
+html body p[style*="text-align:center"] {
+  text-align: center !important;
+  margin-top: 2em !important;
+  margin-bottom: 2em !important;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
 @media (max-width: 600px) {
-  h1 { font-size: 1.8rem; }
-  h2 { font-size: 1.4rem; }
-  .post-title { font-size: 1.7rem; }
-  body { font-size: 16px; }
-  .wrapper { padding: 0 1rem; }
-  .site-nav .page-link { font-size: 0.85rem; }
-  .widget { padding: 1.2em; }
+  html body h1 { font-size: 1.9rem !important; }
+  html body h2 { font-size: 1.4rem !important; }
+  html body .post-title { font-size: 1.8rem !important; }
+  html body { font-size: 16px !important; }
+  html body .wrapper { padding: 0 1rem !important; }
+  html body .site-nav .page-link { font-size: 0.85rem !important; }
+  html body .widget { padding: 1.2em !important; }
+  html body .card { padding: 1.2em !important; }
+  html body .toc { padding: 1.2em 1.5em !important; }
 }
 
-/* ---------- Accesibilidad ---------- */
-:focus-visible {
-  outline: 2px solid var(--color-accent-2);
-  outline-offset: 2px;
-  border-radius: 2px;
+/* ============================================================
+   ACCESIBILIDAD
+   ============================================================ */
+html :focus-visible {
+  outline: 2px solid var(--ec-accent-2) !important;
+  outline-offset: 2px !important;
+  border-radius: 2px !important;
 }
 
-/* ---------- Impresión ---------- */
+/* ============================================================
+   IMPRESIÓN
+   ============================================================ */
 @media print {
-  body { background: white; color: black; }
-  .site-header, .site-footer, .site-nav, .widget-actions { display: none; }
-  a { color: black; text-decoration: underline; }
-  .post-title { color: black; }
+  html body { background: white !important; color: black !important; }
+  html body .site-header, html body .site-footer, html body .site-nav, html body .widget-actions { display: none !important; }
+  html body a { color: black !important; text-decoration: underline !important; }
+  html body .post-title { color: black !important; }
+  html body .card, html body .widget, html body .recursos { box-shadow: none !important; border: 1px solid #ccc !important; }
 }
