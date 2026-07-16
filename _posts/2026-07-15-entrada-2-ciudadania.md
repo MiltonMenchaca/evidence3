@@ -26,7 +26,7 @@ Ninguno es "mejor"; se necesitan los tres.
 
 En **EMCY**, el emprendimiento que llevo con un compañero, tratamos de movernos hacia ese tercer perfil: no se trata solo de vender un servicio de pentesting, sino de **acercar buenas prácticas de ciberseguridad a pymes que ni siquiera saben que están expuestas**. Esa es, a pequeña escala, la diferencia entre caridad puntual y trabajo público real.
 
-<div class="recursos">
+<div class="recursos" markdown="1">
 <strong>📖 Recursos para profundizar</strong>
 <ul>
   <li><a href="https://plato.stanford.edu/archives/spr2014/entries/citizenship/" target="_blank" rel="noopener">"Citizenship" — Leydet (Stanford Encyclopedia of Philosophy)</a></li>

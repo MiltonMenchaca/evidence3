@@ -16,7 +16,7 @@ Cincuenta años después llegó su complemento silencioso: la **Carta de la Tier
 
 Cuando configuro políticas de **retención y borrado de datos** en un servidor, o cuando negamos acceso a información de un cliente a alguien que no debería tenerla, estoy aplicando el **artículo 12 de la DUDH** (derecho a la privacidad) sin siquiera pensarlo conscientemente. La ética no siempre se ve como un principio grande y abstracto; muchas veces se ve como una línea de configuración bien puesta.
 
-<div class="recursos">
+<div class="recursos" markdown="1">
 <strong>📖 Recursos para profundizar</strong>
 <ul>
   <li><a href="https://www.un.org/es/about-us/universal-declaration-of-human-rights" target="_blank" rel="noopener">Documento oficial de la DUDH (Naciones Unidas)</a></li>

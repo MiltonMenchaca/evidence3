@@ -25,7 +25,7 @@ Y hay un riesgo real en esto: **perder la identidad propia** tratando de fundirt
 
 En el trabajo con clientes de **EMCY** de distintas regiones y giros de negocio, aprendí (a veces a la mala) que **proponer la misma solución técnica "de catálogo"** sin entender primero cómo opera esa organización específica casi nunca funciona. *Escuchar antes de proponer* no es solo buena práctica de consultoría; es, literalmente, práctica de empatía.
 
-<div class="recursos">
+<div class="recursos" markdown="1">
 <strong>📖 Recursos para profundizar</strong>
 <ul>
   <li><a href="https://www.un.org/es/impacto-acad%C3%A9mico/di%C3%A1logo-intercultural" target="_blank" rel="noopener">"Diálogo intercultural" — Naciones Unidas</a></li>

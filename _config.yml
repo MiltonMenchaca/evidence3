@@ -1,7 +1,7 @@
 title: "Ética en código"
 author: "Milton Emilio Menchaca Manero"
 description: "Blog académico de Ética profesional y ciudadanía — Universidad Tecmilenio"
-baseurl: ""
+baseurl: "/evidence3"
 url: "https://miltonmenchaca.github.io"
 repository: "MiltonMenchaca/evidence3"
 
@@ -11,7 +11,7 @@ theme: minima
 # Markdown
 markdown: kramdown
 highlighter: rouge
-permalink: /:title/
+permalink: /:year/:month/:day/:title/
 
 # Plugins
 plugins:

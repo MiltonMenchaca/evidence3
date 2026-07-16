@@ -27,7 +27,7 @@ En mi trabajo diario esto se traduce en algo tan aburrido como:
 
 Suena a pura eficiencia técnica, pero en el fondo es **cuidado**: menos consumo energético, menos reinicios inesperados, un servicio más estable para clientes que dependen de él para trabajar. El cuidado, aplicado a la infraestructura, también es ética.
 
-<div class="recursos">
+<div class="recursos" markdown="1">
 <strong>📖 Recursos para profundizar</strong>
 <ul>
   <li><a href="https://www.un.org/sustainabledevelopment/es/" target="_blank" rel="noopener">Objetivos de Desarrollo Sostenible — PNUD</a></li>

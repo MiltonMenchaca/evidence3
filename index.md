@@ -5,10 +5,10 @@ subtitle: "5 ideas filosóficas aplicadas al trabajo técnico en TI y cibersegur
 description: "Blog académico de Ética profesional y ciudadanía — Universidad Tecmilenio"
 ---
 
-<div class="toc">
+<div class="toc" markdown="1">
 <h2>📚 Contenido del blog</h2>
 
-0. **Liga del blog** — *https://miltonmenchaca.github.io/evidence3/* (se publica tras subir el código a GitHub Pages)
+0. **Liga del blog** — *[https://miltonmenchaca.github.io/evidence3/](https://miltonmenchaca.github.io/evidence3/)* ✅ Activo
 1. **[Bienvenida]({{ '/2026/07/15/bienvenida/' | relative_url }})** — *Ética en código: 5 ideas para vivir y trabajar mejor*
 2. **[Entrada 1 · Los códigos que nos toca a todos]({{ '/2026/07/15/entrada-1-derechos-humanos/' | relative_url }})** — DUDH y Carta de la Tierra
 3. **[Entrada 2 · ¿Qué tipo de ciudadano eres?]({{ '/2026/07/15/entrada-2-ciudadania/' | relative_url }})** — Conceptos de ciudadanía

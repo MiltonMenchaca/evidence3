@@ -20,11 +20,11 @@ Lo que más rescato es la idea del **término medio**: la virtud no está en los
 
 Esto se aplica de forma casi literal en **seguridad informática**. Un servidor demasiado abierto es un desastre esperando a suceder; un servidor demasiado cerrado deja de ser útil para quien lo necesita usar. El "justo medio" aristotélico es, en el fondo, el mismo principio detrás del **hardening bien hecho**: proteger sin paralizar.
 
-<div class="epigraph">
+<div class="epigraph" markdown="1">
 "El término medio no es un punto matemático: es la respuesta correcta que un agente virtuoso encontraría en cada situación concreta."
 </div>
 
-<div class="recursos">
+<div class="recursos" markdown="1">
 <strong>📖 Recursos para profundizar</strong>
 <ul>
   <li><a href="https://plato.stanford.edu/entries/aristotle-ethics/" target="_blank" rel="noopener">"Aristotle's Ethics" — Stanford Encyclopedia of Philosophy</a></li>
