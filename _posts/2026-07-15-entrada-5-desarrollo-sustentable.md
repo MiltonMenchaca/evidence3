@@ -32,6 +32,7 @@ Suena a pura eficiencia técnica, pero en el fondo es **cuidado**: menos consumo
 <ul>
   <li><a href="https://www.un.org/sustainabledevelopment/es/" target="_blank" rel="noopener">Objetivos de Desarrollo Sostenible — PNUD</a></li>
   <li><a href="https://psicologiaymente.com/desarrollo/teoria-etica-cuidado-gilligan" target="_blank" rel="noopener">"La Teoría de la Ética del Cuidado de Carol Gilligan" — Arrimada (Psicología y Mente, 2021)</a></li>
+  <li><a href="https://www.ipcc.ch/reports/" target="_blank" rel="noopener">Informes del Panel Intergubernamental sobre Cambio Climático (IPCC)</a></li>
   <li><a href="{{ '/actividades.html#huella' | relative_url }}">Calculadora de huella de carbono</a> — actividad interactiva del blog</li>
 </ul>
 </div>

@@ -44,6 +44,20 @@ Cinco entradas cortas, cada una enlazando una idea filosófica con un problema r
   <a href="{{ '/2026/07/15/entrada-5-desarrollo-sustentable/' | relative_url }}" class="card-link">Leer entrada →</a>
 </div>
 
+## Justificación de la selección de los cinco subtemas
+
+Elegí estos cinco subtemas porque cada uno responde a una **decisión técnica cotidiana** que tomo como administrador de sistemas y emprendedor en ciberseguridad, y porque juntos cubren el espectro completo de lo que la rúbrica del módulo llama *"el actuar ético"*:
+
+| # | Subtema | Importancia en mi aprendizaje significativo |
+|---|---------|-------------------------------------------|
+| 1 | **DUDH y Carta de la Tierra** | Sin un marco universal de derechos y deberes, las decisiones de privacidad y retención de datos se vuelven arbitrarias. |
+| 2 | **Conceptos de ciudadanía** | Pasé de entender "ciudadano" como "votar cada 3 años" a verlo como un rol activo en lo profesional (mi emprendimiento EMCY). |
+| 3 | **Ética aristotélica del término medio** | El *hardening* de un servidor es exactamente esto: ni abierto ni cerrado. Cada decisión técnica es un ejercicio de equilibrio. |
+| 4 | **Entendimiento intercultural** | Atiendo clientes de regiones y giros muy distintos; sin escucha activa, las soluciones técnicas fallan aunque sean técnicamente correctas. |
+| 5 | **Desarrollo sustentable** | Mi trabajo consume recursos reales (energía, RAM, ancho de banda). Aprender a cuidar también es aprender a no desperdiciar. |
+
+La secuencia sigue un orden deliberado: de lo **universal** (derechos humanos) a lo **personal** (sustentabilidad), pasando por lo **colectivo** (ciudadanía), lo **práctico** (virtud) y lo **interpersonal** (empatía).
+
 ## Una nota de método
 
 No pretendo enseñar filosofía. Pretendo **mostrar dónde se filtra** la filosofía en decisiones que de otro modo parecerían puramente técnicas. Si al final del recorrido queda una pregunta dando vueltas — *"¿a quién beneficia (o perjudica) esta decisión que estoy a punto de tomar?"* — este blog habrá cumplido su propósito.

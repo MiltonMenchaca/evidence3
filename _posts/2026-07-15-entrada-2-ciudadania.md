@@ -31,6 +31,7 @@ En **EMCY**, el emprendimiento que llevo con un compañero, tratamos de movernos
 <ul>
   <li><a href="https://plato.stanford.edu/archives/spr2014/entries/citizenship/" target="_blank" rel="noopener">"Citizenship" — Leydet (Stanford Encyclopedia of Philosophy)</a></li>
   <li><a href="https://www.noroeste.com.mx/opinion/malecon-mazatlan/la-agencia-ciudadana-GNOP91282" target="_blank" rel="noopener">"La agencia ciudadana" — Vega (El Noroeste, 2015)</a></li>
+  <li><a href="https://www.civicsforall.org/is-this-democracy" target="_blank" rel="noopener">Westheimer, J. y Kahne, J. (2004). "What Kind of Citizen? The Politics of Educating for Democracy" — American Educational Research Journal</a></li>
   <li><a href="{{ '/actividades.html#diagnostico' | relative_url }}">Autodiagnóstico de ciudadanía</a> — actividad interactiva del blog</li>
 </ul>
 </div>

@@ -20,6 +20,7 @@ Cuando configuro políticas de **retención y borrado de datos** en un servidor,
 <strong>📖 Recursos para profundizar</strong>
 <ul>
   <li><a href="https://www.un.org/es/about-us/universal-declaration-of-human-rights" target="_blank" rel="noopener">Documento oficial de la DUDH (Naciones Unidas)</a></li>
+  <li><a href="https://www.ohchr.org/en/universal-declaration-of-human-rights" target="_blank" rel="noopener">Página oficial de la DUDH — Oficina del Alto Comisionado de las Naciones Unidas para los Derechos Humanos (ACNUDH)</a></li>
   <li><a href="https://cartadelatierra.org/lea-la-carta-de-la-tierra/descargar-la-carta/" target="_blank" rel="noopener">Texto completo de la Carta de la Tierra</a></li>
   <li><a href="{{ '/actividades.html#trivia' | relative_url }}">Trivia DUDH</a> — actividad interactiva del blog</li>
 </ul>

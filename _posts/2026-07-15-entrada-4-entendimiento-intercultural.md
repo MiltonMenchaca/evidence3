@@ -30,6 +30,7 @@ En el trabajo con clientes de **EMCY** de distintas regiones y giros de negocio,
 <ul>
   <li><a href="https://www.un.org/es/impacto-acad%C3%A9mico/di%C3%A1logo-intercultural" target="_blank" rel="noopener">"Diálogo intercultural" — Naciones Unidas</a></li>
   <li><a href="https://www.universidadmayoresceu.es/wp-content/uploads/2020/04/APUNTES-LA-EMPATIA-ACEPTACION-AUTENTICIDAD.pdf" target="_blank" rel="noopener">"La empatía, aceptación incondicional y autenticidad" — Barreda (CEU, 2020)</a></li>
+  <li><a href="https://en.unesco.org/interculturaldialogue" target="_blank" rel="noopener">UNESCO — Intercultural Dialogue: From Challenges to Opportunities</a></li>
   <li><a href="{{ '/actividades.html#zapatos' | relative_url }}">Dinámica "Un día en los zapatos del otro"</a> — ejercicio de escritura empática</li>
 </ul>
 </div>
